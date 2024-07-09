@@ -1,0 +1,5 @@
+Images:
+
+Rock,_Paper,_Scissors,_Lizard,_Spock:
+
+https://static.wikia.nocookie.net/bigbangtheory/images/7/7d/RPSLS.png/revision/latest?cb=20120822205915
