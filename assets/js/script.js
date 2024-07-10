@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll("#gameButtonContainer button");
 
   function startGame(playerChoice) {
-    const computerChoice =
-      choices[Math.floor(Math.random() * choices.length)];
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
     let result = "";
 
     if (playerChoice === computerChoice) {
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         totalComputerResult.textContent = `Computer Total: ${computerWins}`;
       }
 
-// Update displays
+      // Update displays
       playerDisplay.textContent = `Player: ${
         playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
       }`;
@@ -67,26 +66,32 @@ document.addEventListener("DOMContentLoaded", function () {
       }`;
       resultDisplay.textContent = result;
 
-// Check if player or computer wins the game
+      // Check if player or computer wins the game
       if (playerWins === 3 || computerWins === 3) {
         lockButtons();
         if (playerWins === 3) {
-          console.log("Player wins the game!");
+          let victory = document.createElement("div");
+          victory.textContent = "VICTORY, you are super!";
+          victory.style.color = "green";
+          document.body.append(victory);
         } else {
-          console.log("Computer wins the game!");
+          let loss = document.createElement("div");
+          loss.textContent = "Try again!";
+          loss.style.color = "red";
+          document.body.append(loss);
         }
       }
     }
   }
-  
-// Function to lock buttons
+
+  // Function to lock buttons
   function lockButtons() {
     buttons.forEach((button) => {
       button.disabled = true;
     });
   }
 
-// Add event listeners to buttons
+  // Add event listeners to buttons
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
       const playerChoice = button.getAttribute("data-choice");
