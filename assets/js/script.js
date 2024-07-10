@@ -1,36 +1,50 @@
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 const playerDisplay = document.getElementById("playerDisplay");
-const computerDisplay = document.getElementById("playerDisplay");
-const resultDisplay = document.getElementById("playerDisplay");
+const computerDisplay = document.getElementById("computerDisplay");
+const resultDisplay = document.getElementById("resultDisplay");
 
 function startGame(playerChoice) {
   const computerChoice = choices[Math.floor(Math.random() * choices.length)];
   let result = "";
 
-if (playerChoice === computerChoice) {
+  if (playerChoice === computerChoice) {
     result = "It's a tie!";
   } else {
     switch (playerChoice) {
       case "rock":
         result =
-          computerChoice === "scissors" || "lizard" ? "You win!" : "You lose!";
+          computerChoice === "scissors" || computerChoice === "lizard"
+            ? "You win!"
+            : "You lose!";
         break;
       case "paper":
         result =
-          computerChoice === "rock" || "lizard" ? "You win!" : "You lose!";
+          computerChoice === "rock" || computerChoice === "spock"
+            ? "You win!"
+            : "You lose!";
         break;
       case "scissors":
         result =
-          computerChoice === "paper" || "lizard" ? "You win!" : "You lose!";
+          computerChoice === "paper" || computerChoice === "lizard"
+            ? "You win!"
+            : "You lose!";
         break;
       case "lizard":
         result =
-          computerChoice === "paper" || "lizard" ? "You win!" : "You lose!";
+          computerChoice === "paper" || computerChoice === "spock"
+            ? "You win!"
+            : "You lose!";
         break;
       case "spock":
         result =
-          computerChoice === "paper" || "lizard" ? "You win!" : "You lose!";
+          computerChoice === "rock" || computerChoice === "scissors"
+            ? "You win!"
+            : "You lose!";
         break;
     }
-}
 
+    playerDisplay.textContent = `Player: ${playerChoice}`;
+    computerDisplay.textContent = `Computer: ${computerChoice}`;
+    resultDisplay.textContent = result;
+  }
+}
