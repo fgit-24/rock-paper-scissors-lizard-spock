@@ -10,30 +10,38 @@
 <body>
     <header>
         <h1>
-            Welcome to your new favorite Game ❤️
+            Welcome to your new favorite Game!
         </h1>
     </header>
     <main>
+        <div>
+            <h3>
+                About
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequatur iste molestiae inventore veritatis excepturi eum maiores molestias tenetur minima similique dolorum impedit corporis quasi nulla accusamus, dolorem non aspernatur.
+            </p>
+        </div>
         <section id="gameSection">
             <div id="gameButtonContainer">
-                <button onclick="startGame('rock')">
+                <button data-choice="rock">
                     <img src="assets/images/rock.png" class="buttonImages" alt="rock" aria-label="rock">
                 </button>
-                <button onclick="startGame('paper')">
+                <button data-choice="paper">
                     <img src="assets/images/paper.png" class="buttonImages" alt="paper" aria-label="paper">
                 </button>
-                <button onclick="startGame('scissors')">
+                <button data-choice="scissors">
                     <img src="assets/images/scissors.png" class="buttonImages" alt="scissors" aria-label="scissors">
                 </button>
-                <button onclick="startGame('lizard')">
+                <button data-choice="lizard">
                     <img src="assets/images/lizard.png" class="buttonImages" alt="lizard" aria-label="lizard">
                 </button>
-                <button onclick="startGame('spock')">
+                <button data-choice="spock">
                     <img src="assets/images/spock.png" class="buttonImages" alt="spock" aria-label="spock">
                 </button>
             </div>
             <div>
-                <button onclick="newGame()">
+                <button id="newGame" alt="newGame" aria-label="new game">
                     New Game
                 </button>
             </div>
@@ -44,22 +52,36 @@
                 Computer: 
             </div>
             <div id="resultDisplay">
-                Result: 
+                Result 
             </div>
-            <div class="totalResult">
-                Total: 
-                <p id="totalPlayerResult">
-                    Player:
-                </p>
-                <p id="totalComputerResult">
-                    Computer:
-                </p>
+            <div id="totalPlayerResult">
+                Player Total: 0
+            </div>
+            <div id="totalComputerResult">
+                Computer Total: 0
             </div>
         </section>
     </main>
     <footer>
-
+        <ul id="footerNav">
+            <li class="footerNavList" class="footerNavLinks">
+                <a href="https://www.linkedin.com/in/-florian-haas-" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="footerNavList" class="footerNavLinks">
+                <a href="https://snipverse.com/fhaas" target="_blank">
+                    Snipverse
+                </a>
+            </li>
+            <li class="footerNavList">
+                <p id="footerText">
+                    Made with love, fun, and javascript ❤️!
+                </p>
+            </li>
+        </ul>
     </footer>
+    <script src="https://kit.fontawesome.com/c148ec9d3c.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
