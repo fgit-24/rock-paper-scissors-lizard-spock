@@ -74,11 +74,13 @@ document.addEventListener("DOMContentLoaded", function () {
           let victory = document.createElement("div");
           victory.textContent = "VICTORY, you are super!";
           victory.style.color = "green";
+          victory.classList.add("game-message");
           document.body.append(victory);
         } else {
           let loss = document.createElement("div");
           loss.textContent = "Try again!";
           loss.style.color = "red";
+          loss.classList.add("game-message");
           document.body.append(loss);
         }
       }
@@ -106,6 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
     computerWins = 0;
     totalPlayerResult.textContent = "Player Total: 0";
     totalComputerResult.textContent = "Computer Total: 0";
+    document.querySelectorAll(".game-message").forEach((message) => {
+      message.remove();
+    });
+
     document
       .querySelectorAll("#gameButtonContainer button")
       .forEach((button) => {
