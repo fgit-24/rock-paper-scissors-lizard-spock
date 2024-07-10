@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const choices = ["rock", "paper", "scissors", "lizard", "spock"];
   let playerWins = 0;
   let computerWins = 0;
+  const playerDisplay = document.getElementById("playerDisplay");
+  const computerDisplay = document.getElementById("computerDisplay");
+  const resultDisplay = document.getElementById("resultDisplay");
+  const totalPlayerResult = document.getElementById("totalPlayerResult");
+  const totalComputerResult = document.getElementById("totalComputerResult");
 
   function startGame(playerChoice) {
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -53,18 +58,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (playerWins === 3) {
         console.log("Player wins the game!");
+      } else if (computerWins === 3) {
+        console.log("Computer wins the game!");
       }
     }
 
-    playerDisplay.textContent = `Player: ${playerChoice}`;
-    computerDisplay.textContent = `Computer: ${computerChoice}`;
+    playerDisplay.textContent = `Player: ${
+      playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
+    }`;
+    computerDisplay.textContent = `Computer: ${
+      computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
+    }`;
     resultDisplay.textContent = result;
   }
 
   const buttons = document.querySelectorAll("#gameButtonContainer button");
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
-      const playerChoice = button.querySelector("img").alt;
+      const playerChoice = button.getAttribute("data-choice");
       startGame(playerChoice);
     });
   });
