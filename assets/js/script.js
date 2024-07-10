@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const resultDisplay = document.getElementById("resultDisplay");
   const totalPlayerResult = document.getElementById("totalPlayerResult");
   const totalComputerResult = document.getElementById("totalComputerResult");
+  const buttons = document.querySelectorAll("#gameButtonContainer button");
 
   function startGame(playerChoice) {
-    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    const computerChoice =
+      choices[Math.floor(Math.random() * choices.length)];
     let result = "";
 
     if (playerChoice === computerChoice) {
@@ -56,23 +58,35 @@ document.addEventListener("DOMContentLoaded", function () {
         totalComputerResult.textContent = `Computer Total: ${computerWins}`;
       }
 
-      if (playerWins === 3) {
-        console.log("Player wins the game!");
-      } else if (computerWins === 3) {
-        console.log("Computer wins the game!");
+// Update displays
+      playerDisplay.textContent = `Player: ${
+        playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
+      }`;
+      computerDisplay.textContent = `Computer: ${
+        computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
+      }`;
+      resultDisplay.textContent = result;
+
+// Check if player or computer wins the game
+      if (playerWins === 3 || computerWins === 3) {
+        lockButtons();
+        if (playerWins === 3) {
+          console.log("Player wins the game!");
+        } else {
+          console.log("Computer wins the game!");
+        }
       }
     }
-
-    playerDisplay.textContent = `Player: ${
-      playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
-    }`;
-    computerDisplay.textContent = `Computer: ${
-      computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
-    }`;
-    resultDisplay.textContent = result;
+  }
+  
+// Function to lock buttons
+  function lockButtons() {
+    buttons.forEach((button) => {
+      button.disabled = true;
+    });
   }
 
-  const buttons = document.querySelectorAll("#gameButtonContainer button");
+// Add event listeners to buttons
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
       const playerChoice = button.getAttribute("data-choice");
