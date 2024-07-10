@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalPlayerResult = document.getElementById("totalPlayerResult");
   const totalComputerResult = document.getElementById("totalComputerResult");
   const buttons = document.querySelectorAll("#gameButtonContainer button");
+  const newGame = document.getElementById("newGame");
 
   function startGame(playerChoice) {
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -97,5 +98,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const playerChoice = button.getAttribute("data-choice");
       startGame(playerChoice);
     });
+  });
+
+  // Start new game
+  newGame.addEventListener("click", function () {
+    playerWins = 0;
+    computerWins = 0;
+    totalPlayerResult.textContent = "Player Total: 0";
+    totalComputerResult.textContent = "Computer Total: 0";
+    document
+      .querySelectorAll("#gameButtonContainer button")
+      .forEach((button) => {
+        button.disabled = false;
+      });
   });
 });
