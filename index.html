@@ -9,11 +9,13 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to your new favorite Game </h1>
+        <h1>
+            Welcome to your new favorite Game ❤️
+        </h1>
     </header>
     <main>
-        <section id="game-container">
-            <div>
+        <section id="gameSection">
+            <div id="gameButtonContainer">
                 <button onclick="startGame('rock')">
                     <img src="assets/images/rock.png" class="buttonImages" alt="rock" aria-label="rock">
                 </button>
@@ -37,7 +39,16 @@
                 Computer: 
             </div>
             <div id="resultDisplay">
-                Result 
+                Result: 
+            </div>
+            <div class="totalResult">
+                Total: 
+                <p id="totalPlayerResult">
+                    Player:
+                </p>
+                <p id="totalComputerResult">
+                    Computer:
+                </p>
             </div>
         </section>
     </main>
