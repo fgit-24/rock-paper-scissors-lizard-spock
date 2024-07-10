@@ -1,8 +1,11 @@
-const choices = ["rock", "paper", "scissors", "liyard", "spock"];
+const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("playerDisplay");
 const resultDisplay = document.getElementById("playerDisplay");
 
+function startGame(playerChoice) {
+  const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+  let result = "";
 
 if (playerChoice === computerChoice) {
     result = "It's a tie!";
