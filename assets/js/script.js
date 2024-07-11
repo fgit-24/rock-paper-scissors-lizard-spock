@@ -75,13 +75,15 @@ document.addEventListener("DOMContentLoaded", function () {
           victory.textContent = "VICTORY, you are super!";
           victory.style.color = "green";
           victory.classList.add("game-message");
-          document.body.append(victory);
+          let resultContainer = document.getElementById('resultContainer');
+          resultContainer.append(victory);
         } else {
           let loss = document.createElement("div");
           loss.textContent = "Try again!";
           loss.style.color = "red";
           loss.classList.add("game-message");
-          document.body.append(loss);
+          let resultContainer = document.getElementById('resultContainer');
+          resultContainer.append(loss);
         }
       }
     }
