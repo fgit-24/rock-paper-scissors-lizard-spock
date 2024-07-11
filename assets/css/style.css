@@ -128,7 +128,7 @@ tr:nth-child(even) {
 #newBtnDiv {
     position: absolute;
     align-self: flex-end;
-    margin-top: 86px;
+    margin-top: 98px;
     margin-right: 10px;
 }
 
@@ -145,6 +145,16 @@ tr:nth-child(even) {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-message {
+    position: absolute;
+    margin-top: 46px;
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+
 }
 
 #newGame:hover {
