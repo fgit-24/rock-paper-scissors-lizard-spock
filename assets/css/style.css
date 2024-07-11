@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 :root {
     --bg-color: white;
     font-size: 1rem;
 }
 
-
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,24 +18,51 @@ html {
 
 body {
     height: 100vh;
+    text-align: center;
     background: radial-gradient(circle, #66abff, #376af7);
     padding-bottom: 60px;
     font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#headerSection {
+    margin: 40px auto;
+}
 
 h1 {
     display: inline;
+    text-align: justify;
     color: cornflowerblue;
-    font-size: large;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
 }
 
-#headerSection {
+#aboutSection{
+    margin: 40px auto;
 }
 
+#aboutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
 
-#aboutSection {
-    /* About styles here */
+#callToAction {
+    /* width: 30%; */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-right: 20px;
+}
+#about {
+    /* width: 60%; */
+    padding: 10px;
+    color: white;
+}
+
+#tableSection {
+    margin: 40px auto;
 }
 
 table {
@@ -44,29 +70,31 @@ table {
     border-collapse: collapse;
     margin: 20px 0;
 }
+
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
 }
+
 th {
     background-color: #333;
     color: white;
 }
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-
-
-
-
 #gameSection {
     min-height: calc(100vh - 60px);
+    margin: 40px auto;
     padding-bottom: 60px;
 }
 
 #gameButtonContainer {
+    margin: 40px auto;
+    padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -81,6 +109,7 @@ tr:nth-child(even) {
 }
 
 footer {
+    margin-top: 60px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -96,14 +125,16 @@ footer {
 #footerNav {
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
 .footerNavLinks {
-    right: 0;
+    flex-direction: column;
+    right: 0px;
+    display: flex;
+    gap: 20px;
 }
 
 .footerNavList a {
@@ -112,8 +143,8 @@ footer {
     margin-right: 20px;
 }
 
-#footerNavLinksSnipverse {
-    /* Get link to LinkedIn-Icon */
+#footerText {
+    text-align: left;
 }
 
 .footerNavList a:hover {
