@@ -38,6 +38,47 @@
                 </p>
             </div>
         </section>
+        <section id="rule-section">
+            <h2>
+                Rock Paper Scissors Lizard Spock Rules
+            </h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Move</th>
+                        <th>Beats</th>
+                        <th>Rule</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rock</td>
+                        <td>Scissors, Lizard</td>
+                        <td>Rock crushes Scissors and crushes Lizard</td>
+                    </tr>
+                    <tr>
+                        <td>Paper</td>
+                        <td>Rock, Spock</td>
+                        <td>Paper covers Rock and disproves Spock</td>
+                    </tr>
+                    <tr>
+                        <td>Scissors</td>
+                        <td>Paper, Lizard</td>
+                        <td>Scissors cuts Paper and decapitates Lizard</td>
+                    </tr>
+                    <tr>
+                        <td>Lizard</td>
+                        <td>Paper, Spock</td>
+                        <td>Lizard eats Paper and poisons Spock</td>
+                    </tr>
+                    <tr>
+                        <td>Spock</td>
+                        <td>Rock, Scissors</td>
+                        <td>Spock vaporizes Rock and smashes Scissors</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
         <section id="gameSection">
             <div id="gameButtonContainer">
                 <button data-choice="rock">
@@ -61,6 +102,7 @@
                     New Game
                 </button>
             </div>
+            <div id='resultContainer'>
             <div id="playerDisplay">
                 Player: 
             </div>
@@ -76,24 +118,29 @@
             <div id="totalComputerResult">
                 Computer Total: 0
             </div>
+            </div>
         </section>
     </main>
     <footer>
         <ul id="footerNav">
+            <div class="footerNavList">
             <li class="footerNavList" class="footerNavLinks">
                 <a href="https://www.linkedin.com/in/-florian-haas-" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
-            <li class="footerNavList" class="footerNavLinks" id="footerNavLinksSnipverse">
+            <li class="footerNavLinks">
                 <a href="https://snipverse.com/fhaas" target="_blank">
                     Snipverse
                 </a>
             </li>
-            <li class="footerNavList">
+            </div>
+            <div class="footerNavList">
+            <li>
                 <p id="footerText">
                     Made with love, fun, and javascript ❤️
                 </p>
+            </div>
             </li>
         </ul>
     </footer>
