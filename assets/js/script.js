@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           let loss = document.createElement("div");
           loss.textContent = "Try again!";
-          loss.style.color = "red";
+          loss.style.color = "white";
           loss.classList.add("game-message");
           let resultContainer = document.getElementById('resultContainer');
           resultContainer.append(loss);

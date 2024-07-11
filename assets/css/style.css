@@ -104,10 +104,6 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-#gameSection {
-    /* display: inline-block; */
-}
-
 #resultContainer {
     display: flex;
     flex-direction: column;
@@ -154,7 +150,6 @@ tr:nth-child(even) {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-
 }
 
 #newGame:hover {
@@ -185,14 +180,13 @@ tr:nth-child(even) {
 }
 
 footer {
-    margin-top: 60px;
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 60px;
     padding: 20px;
     background-color: #333;
-    color: var(--bg-color);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -201,9 +195,22 @@ footer {
 #footerNav {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     align-items: center;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.footerNavList {
+    display: flex;
+}
+
+.footerNavList a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
 }
 
 .footerNavLinks {
@@ -212,18 +219,25 @@ footer {
     gap: 20px;
 }
 
-.footerNavLinks a {
-    color: var(--bg-color);
-    text-decoration: none;
-    margin-right: 20px;
-}
-
 #footerText {
-    text-align: left;
+    padding-right: 10px;
+    align-self: flex-end;
+    text-align: justify;
 }
 
-.footerNavLinks a:hover {
-    color: #ff6347;
+.social-link {
+    display: inline;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#snipverse {
+    margin-left: 10px;
+}
+
+.social-link a:hover {
+    color: #66abff;
 }
 
 @media only screen and (min-width: 500px) {
