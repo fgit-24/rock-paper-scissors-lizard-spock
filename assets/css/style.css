@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 :root {
@@ -36,7 +36,11 @@ h1 {
     font-size: 3rem;
 }
 
-#aboutSection{
+h2 {
+    color: var(--bg-color);
+}
+
+#aboutSection {
     margin: 40px auto;
 }
 
@@ -49,16 +53,15 @@ h1 {
 }
 
 #callToAction {
-    /* width: 30%; */
     padding: 10px;
     text-align: center;
-    color: white;
+    color: var(--bg-color);
     margin-right: 20px;
 }
+
 #about {
-    /* width: 60%; */
     padding: 10px;
-    color: white;
+    color: var(--bg-color);
 }
 
 #tableSection {
@@ -79,22 +82,32 @@ th, td {
 
 th {
     background-color: #333;
-    color: white;
+    color: var(--bg-color);
 }
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-#resultContainer{
+#resultContainer {
     display: flex;
     flex-direction: column;
+    color: var(--bg-color);
     text-align: left;
     margin-left: 10px;
     gap: 8px;
     font-size: 1.2rem;
     font-weight: bold;
-    left: 0;
+}
+
+#newGame {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: rgb(22, 129, 217);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 #gameSection {
@@ -127,7 +140,7 @@ footer {
     height: 60px;
     padding: 20px;
     background-color: #333;
-    color: #fff;
+    color: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -142,14 +155,13 @@ footer {
 }
 
 .footerNavLinks {
-    flex-direction: column;
-    right: 0px;
     display: flex;
+    flex-direction: column; /* corrected class name */
     gap: 20px;
 }
 
-.footerNavList a {
-    color: #fff;
+.footerNavLinks a {
+    color: var(--bg-color);
     text-decoration: none;
     margin-right: 20px;
 }
@@ -158,6 +170,6 @@ footer {
     text-align: left;
 }
 
-.footerNavList a:hover {
+.footerNavLinks a:hover {
     color: #ff6347;
 }
