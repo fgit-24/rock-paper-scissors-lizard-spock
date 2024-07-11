@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (playerWins === 3) {
           let victory = document.createElement("div");
           victory.textContent = "VICTORY, you are super!";
-          victory.style.color = "green";
+          victory.style.color = "rgb(22, 129, 217)";
           victory.classList.add("game-message");
           let resultContainer = document.getElementById('resultContainer');
           resultContainer.append(victory);

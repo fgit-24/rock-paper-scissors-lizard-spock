@@ -245,4 +245,7 @@ footer {
     #aboutContainer {
         flex-direction: row;
     }
+    .game-message {
+        position: absolute;
+    }
 }
