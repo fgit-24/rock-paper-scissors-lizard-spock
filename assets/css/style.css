@@ -72,7 +72,7 @@ h3 {
 }
 
 #about > h2 {
-    text-align: justify;
+    text-align: center;
 }
 
 #about > p {
@@ -144,10 +144,11 @@ tr:nth-child(even) {
 }
 
 .game-message {
-    position: absolute;
+    position: relative;
     margin-top: 46px;
     align-self: center;
     text-align: center;
+    margin-right: 10px;
     font-size: 2rem;
     font-weight: bold;
 }
