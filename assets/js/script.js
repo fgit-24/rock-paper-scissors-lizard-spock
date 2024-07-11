@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       computerDisplay.textContent = `Computer: ${
         computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
       }`;
-      resultDisplay.textContent = result;
+      resultDisplay.textContent = `Result: ${result}`;
 
       // Check if player or computer wins the game
       if (playerWins === 3 || computerWins === 3) {
@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     computerWins = 0;
     totalPlayerResult.textContent = "Player Total: 0";
     totalComputerResult.textContent = "Computer Total: 0";
+    resultDisplay.textContent = "Result:"
     document.querySelectorAll(".game-message").forEach((message) => {
       message.remove();
     });
