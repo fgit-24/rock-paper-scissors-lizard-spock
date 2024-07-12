@@ -72,8 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
         lockButtons();
         if (playerWins === 3) {
           let victory = document.createElement("div");
-          victory.textContent = "VICTORY, you are super!";
-          victory.style.color = "rgb(22, 129, 217)";
+          victory.textContent = "VICTORY, you're cool!";
+          victory.style.color = "white";
           victory.classList.add("game-message");
           let resultContainer = document.getElementById('resultContainer');
           resultContainer.append(victory);

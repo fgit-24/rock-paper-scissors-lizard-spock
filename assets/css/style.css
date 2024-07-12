@@ -144,7 +144,7 @@ tr:nth-child(even) {
 }
 
 .game-message {
-    position: relative;
+    position: static;
     margin-top: 46px;
     align-self: center;
     text-align: center;
@@ -245,7 +245,11 @@ footer {
     #aboutContainer {
         flex-direction: row;
     }
+}
+@media only screen and (min-width: 900px) {
     .game-message {
         position: absolute;
+        align-self: center;
+        justify-self: center;
     }
 }
