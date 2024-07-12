@@ -124,7 +124,7 @@ Additionally, I have reviewed the HTML, CSS, and JavaScript, and conducted Light
 [HTML-Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffgit-24.github.io%2Frock-paper-scissors-lizard-spock%2F) 
 
 ### CSS-Validation
-![CSS-Validation](documentation\15-css-validation.png)
+![CSS-Validation](documentation/15-css-validation.png)
 [CSS-Validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffgit-24.github.io%2Frock-paper-scissors-lizard-spock%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) 
 
 ### Javascript-Validation
