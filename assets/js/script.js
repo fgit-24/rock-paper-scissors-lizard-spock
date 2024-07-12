@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let playerWins = 0;
   let computerWins = 0;
 
+  // DOM elements for displaying game information
   const playerDisplay = document.getElementById("playerDisplay");
   const computerDisplay = document.getElementById("computerDisplay");
   const resultDisplay = document.getElementById("resultDisplay");
@@ -11,10 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll("#gameButtonContainer button");
   const newGame = document.getElementById("newGame");
 
+  // Function to get a random choice for the computer
   function getComputerChoice() {
     return choices[Math.floor(Math.random() * choices.length)];
   }
 
+  // Function to determine the result of the game based on player's and computer's choices
   function determineResult(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
       return "It's a tie!";
@@ -31,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return winningConditions[playerChoice].includes(computerChoice) ? "You win!" : "You lose!";
   }
 
+  // Function to update the scores based on the result of the game
   function updateScores(result) {
     if (result === "You win!") {
       playerWins++;
@@ -41,16 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Function to update the game displays with current choices and result
   function updateDisplays(playerChoice, computerChoice, result) {
     playerDisplay.textContent = `Player: ${capitalizeFirstLetter(playerChoice)}`;
     computerDisplay.textContent = `Computer: ${capitalizeFirstLetter(computerChoice)}`;
     resultDisplay.textContent = `Result: ${result}`;
   }
 
+  // Helper function to capitalize the first letter of a string
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  // Function to check if the game is over (i.e., if either player or computer has won 3 rounds)
   function checkForGameOver() {
     if (playerWins === 3 || computerWins === 3) {
       lockButtons();
@@ -58,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Function to display a message at the end of the game
   function displayEndMessage(message) {
     const endMessage = document.createElement("div");
     endMessage.textContent = message;
@@ -66,12 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('resultContainer').append(endMessage);
   }
 
+  // Function to disable all game buttons (used when the game is over)
   function lockButtons() {
     buttons.forEach((button) => {
       button.disabled = true;
     });
   }
 
+  // Event handler for when a game button is clicked
   function handleButtonClick(event) {
     const playerChoice = event.currentTarget.getAttribute("data-choice");
     const computerChoice = getComputerChoice();
@@ -81,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     checkForGameOver();
   }
 
+  // Function to reset the game to its initial state
   function resetGame() {
     playerWins = 0;
     computerWins = 0;
@@ -97,9 +108,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Add event listeners to each game button to handle player choices
   buttons.forEach((button) => {
     button.addEventListener("click", handleButtonClick);
   });
 
+  // Add event listener to the "New Game" button to reset the game
   newGame.addEventListener("click", resetGame);
 });
