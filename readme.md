@@ -12,7 +12,7 @@ I endeavored to maintain a clean and minimalist design for my page, yet I was eq
 
 After crafting my wireframe, I diligently brought it to life.
 
-![Color Scheme](documentation\02-color-scheme.png)
+![Color Scheme](documentation/02-color-scheme.png)
 
 Blue is a modern and neutral color that perfectly complements my vision of this classic and expresses it visually.
 
@@ -51,14 +51,14 @@ I've used Google Fonts and 'Poppins' in most parts, and 'Oswald' for h1.
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Figma](https://www.figma.com/) to design my site wireframes.
 
-### Desktop
- - ![screenshot](documentation/wireframes/mobile-home.png)
+### Mobile
+ - ![screenshot](documentation\03-wireframe-mobile.png)
 
 ### Tablet
- - ![screenshot](documentation/wireframes/mobile-home.png)
+ - ![screenshot](documentation\04-wireframe-tablet.png)
 
-### Mobile
- - ![screenshot](documentation/wireframes/mobile-home.png)
+### Desktop
+ - ![screenshot](documentation\05-wireframe-notebook.png)
 
 
 # Features
@@ -67,17 +67,17 @@ My project is split into three different sections.
 
 ## About
 Describes what my game is about.
-![screenshot](documentation\06-about.png)
+![screenshot](documentation/06-about.png)
 
 
 ## Rules
 My 'Rules' section uses a table to provide an easy overview of the rules.
-![screenshot](documentation\07-rules.png)
+![screenshot](documentation/07-rules.png)
 
 
 ### Game
 In the third section I've built the actual game.
-![screenshot](documentation\08-game.png)
+![screenshot](documentation/08-game.png)
 
 
 ## Future
@@ -105,23 +105,22 @@ I have tested my deployed website on desktop browsers (Google Chrome and Microso
 Additionally, I have reviewed the HTML, CSS, and JavaScript, and conducted Lighthouse tests for both desktop and mobile.
 
 ### Desktop Google Chrome
-![Google Chrome](documentation\09-chrome-website.png)
+![Google Chrome](documentation/09-chrome-website.png)
 
 ### Desktop Microsoft Edge
-![Microsoft Edge](documentation\10-edge-website.png)
+![Microsoft Edge](documentation/10-edge-website.png)
 
 ### Mobile 
+![Mobile](documentation/11-mobile-website.png)
 
-![Mobile](documentation\11-mobile-website.png)
 ### Lighthouse Desktop
-
-![Lighthouse Desktop](documentation\12-lighthouse-desktop.png)
+![Lighthouse Desktop](documentation/12-lighthouse-desktop.png)
 
 ### Lighthouse Mobile
-![Lighthouse Mobile](documentation\13-lighthouse-mobile.png)
+![Lighthouse Mobile](documentation/13-lighthouse-mobile.png)
 
 ### HTML-Validation
-![HTML-Validation](documentation\14-html-validation.png)
+![HTML-Validation](documentation/14-html-validation.png)
 [HTML-Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffgit-24.github.io%2Frock-paper-scissors-lizard-spock%2F) 
 
 ### CSS-Validation
@@ -129,8 +128,13 @@ Additionally, I have reviewed the HTML, CSS, and JavaScript, and conducted Light
 [CSS-Validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffgit-24.github.io%2Frock-paper-scissors-lizard-spock%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) 
 
 ### Javascript-Validation
-![JavaScript-Validation](documentation\16-javascript-validation.png)
+![JavaScript-Validation](documentation/16-javascript-validation.png)
 [JavaScript - Validation](https://jshint.com/)
+
+
+## Bugs
+
+I can improve my commitments.
 
 
 ## Deployment
