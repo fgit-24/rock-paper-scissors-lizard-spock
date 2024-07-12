@@ -220,8 +220,14 @@ footer {
     gap: 20px;
 }
 
+#listFooterText {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
 #footerText {
     padding-right: 10px;
+    text-align: justify;
     align-self: flex-end;
     text-align: justify;
 }
