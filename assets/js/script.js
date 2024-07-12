@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function () {
   const choices = ["rock", "paper", "scissors", "lizard", "spock"];
   let playerWins = 0;
