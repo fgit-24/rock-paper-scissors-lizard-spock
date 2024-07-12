@@ -52,13 +52,13 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 I've used [Figma](https://www.figma.com/) to design my site wireframes.
 
 ### Mobile
- - ![screenshot](documentation\03-wireframe-mobile.png)
+ - ![screenshot](documentation/03-wireframe-mobile.png)
 
 ### Tablet
- - ![screenshot](documentation\04-wireframe-tablet.png)
+ - ![screenshot](documentation/04-wireframe-tablet.png)
 
 ### Desktop
- - ![screenshot](documentation\05-wireframe-notebook.png)
+ - ![screenshot](documentation/05-wireframe-notebook.png)
 
 
 # Features
