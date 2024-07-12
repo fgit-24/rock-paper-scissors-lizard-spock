@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const choices = ["rock", "paper", "scissors", "lizard", "spock"];
   let playerWins = 0;
   let computerWins = 0;
+
   const playerDisplay = document.getElementById("playerDisplay");
   const computerDisplay = document.getElementById("computerDisplay");
   const resultDisplay = document.getElementById("resultDisplay");
@@ -10,115 +11,95 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll("#gameButtonContainer button");
   const newGame = document.getElementById("newGame");
 
-  function startGame(playerChoice) {
-    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-    let result = "";
+  function getComputerChoice() {
+    return choices[Math.floor(Math.random() * choices.length)];
+  }
 
+  function determineResult(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
-      result = "It's a tie!";
-    } else {
-      switch (playerChoice) {
-        case "rock":
-          result =
-            computerChoice === "scissors" || computerChoice === "lizard"
-              ? "You win!"
-              : "You lose!";
-          break;
-        case "paper":
-          result =
-            computerChoice === "rock" || computerChoice === "spock"
-              ? "You win!"
-              : "You lose!";
-          break;
-        case "scissors":
-          result =
-            computerChoice === "paper" || computerChoice === "lizard"
-              ? "You win!"
-              : "You lose!";
-          break;
-        case "lizard":
-          result =
-            computerChoice === "paper" || computerChoice === "spock"
-              ? "You win!"
-              : "You lose!";
-          break;
-        case "spock":
-          result =
-            computerChoice === "rock" || computerChoice === "scissors"
-              ? "You win!"
-              : "You lose!";
-          break;
-      }
+      return "It's a tie!";
+    }
 
-      if (result === "You win!") {
-        playerWins++;
-        totalPlayerResult.textContent = `Player Total: ${playerWins}`;
-      } else {
-        computerWins++;
-        totalComputerResult.textContent = `Computer Total: ${computerWins}`;
-      }
+    const winningConditions = {
+      rock: ["scissors", "lizard"],
+      paper: ["rock", "spock"],
+      scissors: ["paper", "lizard"],
+      lizard: ["paper", "spock"],
+      spock: ["rock", "scissors"]
+    };
 
-      // Update displays
-      playerDisplay.textContent = `Player: ${
-        playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
-      }`;
-      computerDisplay.textContent = `Computer: ${
-        computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
-      }`;
-      resultDisplay.textContent = `Result: ${result}`;
+    return winningConditions[playerChoice].includes(computerChoice) ? "You win!" : "You lose!";
+  }
 
-      // Check if player or computer wins the game
-      if (playerWins === 3 || computerWins === 3) {
-        lockButtons();
-        if (playerWins === 3) {
-          let victory = document.createElement("div");
-          victory.textContent = "VICTORY, you're cool!";
-          victory.style.color = "white";
-          victory.classList.add("game-message");
-          let resultContainer = document.getElementById('resultContainer');
-          resultContainer.append(victory);
-        } else {
-          let loss = document.createElement("div");
-          loss.textContent = "Try again!";
-          loss.style.color = "white";
-          loss.classList.add("game-message");
-          let resultContainer = document.getElementById('resultContainer');
-          resultContainer.append(loss);
-        }
-      }
+  function updateScores(result) {
+    if (result === "You win!") {
+      playerWins++;
+      totalPlayerResult.textContent = `Player Total: ${playerWins}`;
+    } else if (result === "You lose!") {
+      computerWins++;
+      totalComputerResult.textContent = `Computer Total: ${computerWins}`;
     }
   }
 
-  // Function to lock buttons
+  function updateDisplays(playerChoice, computerChoice, result) {
+    playerDisplay.textContent = `Player: ${capitalizeFirstLetter(playerChoice)}`;
+    computerDisplay.textContent = `Computer: ${capitalizeFirstLetter(computerChoice)}`;
+    resultDisplay.textContent = `Result: ${result}`;
+  }
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  function checkForGameOver() {
+    if (playerWins === 3 || computerWins === 3) {
+      lockButtons();
+      displayEndMessage(playerWins === 3 ? "VICTORY, you're cool!" : "Try again!");
+    }
+  }
+
+  function displayEndMessage(message) {
+    const endMessage = document.createElement("div");
+    endMessage.textContent = message;
+    endMessage.style.color = "white";
+    endMessage.classList.add("game-message");
+    document.getElementById('resultContainer').append(endMessage);
+  }
+
   function lockButtons() {
     buttons.forEach((button) => {
       button.disabled = true;
     });
   }
 
-  // Add event listeners to buttons
-  buttons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const playerChoice = button.getAttribute("data-choice");
-      startGame(playerChoice);
-    });
-  });
+  function handleButtonClick(event) {
+    const playerChoice = event.currentTarget.getAttribute("data-choice");
+    const computerChoice = getComputerChoice();
+    const result = determineResult(playerChoice, computerChoice);
+    updateScores(result);
+    updateDisplays(playerChoice, computerChoice, result);
+    checkForGameOver();
+  }
 
-  // Start new game
-  newGame.addEventListener("click", function () {
+  function resetGame() {
     playerWins = 0;
     computerWins = 0;
-    totalPlayerResult.textContent = "Player Total: 0";
-    totalComputerResult.textContent = "Computer Total: 0";
-    resultDisplay.textContent = "Result:"
+    playerDisplay.textContent = "Player:";
+    computerDisplay.textContent = "Computer:";
+    totalPlayerResult.textContent = "Player Total:";
+    totalComputerResult.textContent = "Computer Total:";
+    resultDisplay.textContent = "Result:";
     document.querySelectorAll(".game-message").forEach((message) => {
       message.remove();
     });
+    buttons.forEach((button) => {
+      button.disabled = false;
+    });
+  }
 
-    document
-      .querySelectorAll("#gameButtonContainer button")
-      .forEach((button) => {
-        button.disabled = false;
-      });
+  buttons.forEach((button) => {
+    button.addEventListener("click", handleButtonClick);
   });
+
+  newGame.addEventListener("click", resetGame);
 });
