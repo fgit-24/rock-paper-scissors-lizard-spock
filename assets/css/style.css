@@ -1,22 +1,27 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+/* Root variables for easy customization */
 :root {
     --bg-color: white;
     --ft-color: rgb(7, 52, 135);
     font-size: 1rem;
 }
 
+/* Global styles for margin, padding, and box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Smooth scroll behavior */
 html {
     scroll-behavior: smooth;
 }
 
+/* Basic styles for the body */
 body {
     height: 100vh;
     text-align: center;
@@ -25,10 +30,12 @@ body {
     font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Header section styles */
 #headerSection {
     margin: 40px auto;
 }
 
+/* Heading 1 styles */
 h1 {
     display: inline;
     text-align: justify;
@@ -38,15 +45,18 @@ h1 {
     font-size: 3rem;
 }
 
+/* Heading 2 styles */
 h2 {
     color: var(--bg-color);
     margin: 40px auto;
 }
 
+/* Heading 3 styles */
 h3 {
     margin: 20px auto;
 }
 
+/* About section styles */
 #aboutSection {
     margin: 40px auto;
 }
@@ -79,6 +89,7 @@ h3 {
     text-align: justify;
 }
 
+/* Table section styles */
 #tableSection {
     margin: 40px auto;
 }
@@ -104,6 +115,7 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+/* Result container styles */
 #resultContainer {
     display: flex;
     flex-direction: column;
@@ -115,12 +127,14 @@ tr:nth-child(even) {
     font-weight: bold;
 }
 
+/* Results styles */
 #results {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
+/* New button container */
 #newBtnDiv {
     position: absolute;
     align-self: flex-end;
@@ -128,6 +142,7 @@ tr:nth-child(even) {
     margin-right: 10px;
 }
 
+/* New game button styles */
 #newGame {
     display: inline-block;
     font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
@@ -143,6 +158,12 @@ tr:nth-child(even) {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+#newGame:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hover effect for the button */
+    transform: translateY(-2px);
+}
+
+/* Game message styles */
 .game-message {
     position: static;
     margin-top: 46px;
@@ -153,11 +174,7 @@ tr:nth-child(even) {
     font-weight: bold;
 }
 
-#newGame:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
-}
-
+/* Game section styles */
 #gameSection {
     min-height: calc(100vh - 60px);
     margin: 40px auto;
@@ -170,16 +187,18 @@ tr:nth-child(even) {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow wrapping of buttons */
     gap: 8px;
 }
 
+/* Button image styles */
 .buttonImages {
     border: none;
     outline: none;
     background: transparent;
 }
 
+/* Footer styles */
 footer {
     position: fixed;
     bottom: 0;
@@ -229,29 +248,30 @@ footer {
     padding-right: 10px;
     text-align: justify;
     align-self: flex-end;
-    text-align: justify;
 }
 
 .social-link {
     display: inline;
     color: #fff;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.2s; /* Transition for color change */
 }
 
 #snipverse {
     margin-left: 10px;
 }
 
-.social-link a:hover {
-    color: #66abff;
+.social-link:hover {
+    color: #66abff; /* Hover effect for social links */
 }
 
+/* Media queries for responsive design */
 @media only screen and (min-width: 500px) {
     #aboutContainer {
-        flex-direction: row;
+        flex-direction: row; /* Row layout for wider screens */
     }
 }
+
 @media only screen and (min-width: 900px) {
     .game-message {
         position: absolute;

@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set, responsive design, description, keywords, and author -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A variant of the beloved 'Rock, Paper, Scissors'-Game">
-    <meta name="RockPaperScissorsLizardSpock" content="It's a fun game">
+    <meta name="keywords" content="Rock, Paper, Scissors, Lizard, Spock, Game">
     <meta name="author" content="Florian">
+    
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon for the website -->
     <link rel="icon" href="assets/images/favicon/favicon.png" type="image/x-icon">
+    
+    <!-- Title of the webpage -->
     <title>Rock Paper Scissors Lizard Spock</title>
 </head>
 <body>
     <header>
         <section id="headerSection">
             <div id="headerContainer">
+                <!-- Main heading -->
                 <h1>
                     Hi, random person on the internet! 🙋‍♂️
                 </h1>
@@ -24,24 +32,27 @@
         <section id="aboutSection">
             <div id="aboutContainer">
                 <div>
+                    <!-- Subheading for the game -->
                     <h2 id="callToAction">
                         Rock Paper Scissors Lizard Spock
                     </h2>
                 </div>
                 <div id="about">
-                <h2>
-                    About
-                </h2>
-                <p>
-                    Embark on an epic journey of wit and strategy with Rock, Paper, Scissors, Lizard, Spock—a game where ancient symbolism meets modern intelligence. <br><br>
-                    Navigate through the elemental forces of rock, the cunning of paper, the precision of scissors, the adaptability of lizard, and the logic of Spock. <br><br>
-                    Choose wisely, outwit your opponent, and embrace the thrill of mastering this beloved game of chance and strategy. <br><br>
-                    Let your decisions speak volumes as you engage in this timeless battle of intellect and intuition.<br><br>
-                </p>
+                    <!-- About section with a brief description of the game -->
+                    <h2>
+                        About
+                    </h2>
+                    <p>
+                        Embark on an epic journey of wit and strategy with Rock, Paper, Scissors, Lizard, Spock—a game where ancient symbolism meets modern intelligence. <br><br>
+                        Navigate through the elemental forces of rock, the cunning of paper, the precision of scissors, the adaptability of lizard, and the logic of Spock. <br><br>
+                        Choose wisely, outwit your opponent, and embrace the thrill of mastering this beloved game of chance and strategy. <br><br>
+                        Let your decisions speak volumes as you engage in this timeless battle of intellect and intuition.<br><br>
+                    </p>
                 </div>
             </div>
         </section>
-        <section id="table-section">
+        <section id="tableSection">
+            <!-- Section containing the rules of the game -->
             <h2>
                 Rock Paper Scissors Lizard Spock Rules
             </h2>
@@ -85,6 +96,7 @@
         <section id="gameSection">
             <div id='resultContainer'>
                 <div id="results">
+                    <!-- Display area for game results -->
                     <div id="playerDisplay">
                         Player: 
                     </div>
@@ -102,13 +114,14 @@
                     </div>
                 </div>
                 <div id="newBtnDiv">
-                    <button id="newGame" alt="newGame" aria-label="new game">
+                    <!-- Button to start a new game -->
+                    <button id="newGame" aria-label="new game">
                         New Game
                     </button>
                 </div>
             </div>
-            </div>
             <div id="gameButtonContainer">
+                <!-- Buttons for player to choose their move -->
                 <button data-choice="rock">
                     <img src="assets/images/rock.png" class="buttonImages" alt="rock" aria-label="rock">
                 </button>
@@ -130,19 +143,21 @@
     <footer>
         <ul id="footerNav">
             <div class="footerNavList">
-            <li class="footerNavList" class="footerNavLinks">
-                <a href="https://www.linkedin.com/in/-florian-haas-" target="_blank" aria-label="linkedin" class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </li>
-            <li class="footerNavLinks" id="snipverseElement">
-                <a href="https://snipverse.com/fhaas" target="_blank" class="social-link" id="snipverse">
-                    Snipverse
-                </a>
-            </li>
+                <!-- Social media links in the footer -->
+                <li class="footerNavLinks">
+                    <a href="https://www.linkedin.com/in/-florian-haas-" target="_blank" aria-label="linkedin" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="footerNavLinks" id="snipverseElement">
+                    <a href="https://snipverse.com/fhaas" target="_blank" class="social-link" id="snipverse">
+                        Snipverse
+                    </a>
+                </li>
             </div>
         </ul>
         <div class="footerNavList">
+            <!-- Footer text -->
             <li id="listFooterText">
                 <p id="footerText">
                     Made by Florian 🚀
@@ -150,7 +165,9 @@
             </li>
         </div>
     </footer>
+    <!-- FontAwesome icons script -->
     <script src="https://kit.fontawesome.com/c148ec9d3c.js" crossorigin="anonymous"></script>
+    <!-- Link to external JavaScript file -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
