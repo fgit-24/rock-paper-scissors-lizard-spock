@@ -257,6 +257,10 @@ footer {
     transition: color 0.2s; /* Transition for color change */
 }
 
+#linkedinIcon {
+    align-self: center;
+}
+
 #snipverse {
     margin-left: 10px;
 }
