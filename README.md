@@ -38,10 +38,12 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 I've used Google Fonts and 'Poppins' in most parts, and 'Oswald' for h1.
 
 ### Poppins
-    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+[Poppins](https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap)
 
 ### Oswald
-    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+[Oswald](https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap)
+
 
 ### Icon
 [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
