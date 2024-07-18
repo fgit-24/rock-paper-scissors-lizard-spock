@@ -41,7 +41,7 @@ h1 {
     text-align: justify;
     color: var(--ft-color);
     font-family: 'Oswald', sans-serif;
-    margin: 40px auto;
+    margin: 40px auto 20px auto;
     font-size: 3rem;
 }
 

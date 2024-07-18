@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkForGameOver() {
     if (playerWins === 3 || computerWins === 3) {
       lockButtons();
-      displayEndMessage(playerWins === 3 ? "VICTORY, you're cool!" : "Try again!");
+      displayEndMessage(playerWins === 3 ? "🎉 VICTORY, you're cool! 🎉" : "💀 Try again! 🤝");
     }
   }
 

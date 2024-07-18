@@ -94,7 +94,6 @@ Depending on the games success, I might build a mobile app for it in the future.
 - [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) used for user interaction on the site.
 - [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-grey?logo=githubpages&logoColor=222222)](https://pages.github.com) used for hosting the deployed front-end site.
 - [![Figma](https://img.shields.io/badge/Figma-grey?logo=figma&logoColor=F24E1E)](https://www.figma.com) used for creating wireframes.
-- [![Leaflet](https://img.shields.io/badge/Leaflet-grey?logo=leaflet&logoColor=199900)](https://leafletjs.com) used as a free open-source interactive map on my site.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
 - [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, and explain things.
 
@@ -134,7 +133,7 @@ Additionally, I have reviewed the HTML, CSS, and JavaScript, and conducted Light
 
 ## Bugs
 
-I can improve my commitments.
+I realized a bit too late into the development stages after speaking with my mentor that my commit messages / version control could be improved. I proceeded with this method to keep it consistent, but in the future I will adhere closer to the recommended method from Code Institute. The same goes for the naming convention of the documentation image file names.
 
 
 ## Deployment
@@ -188,14 +187,16 @@ For help with my JavaScript, I've watched a video von Youtube from [BroCode](htt
 
 ## Content
 
-| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files ||
-| [Font Aweseme](https://fontawesome.com/) | Source for my icon | site for icons and fonts ||
-| [Google Fonts](https://fonts.google.com/) | Source for my fonts | site for icons and fonts ||
-| [Youtube](https://youtube.com) | Inspiration | platform for videos ||
-| [BigBangTheory-Fanpage](https://bigbangtheory.fandom.com) | Images | information site about the famous TV series ||
-| [HTML-Validator](https://validator.w3.org/) | Validation | tool for HTML-Validation ||
-| [CSS-Validator](https://jigsaw.w3.org/css-validator/validator.html.en) | Validation | tool for CSS-Validation ||
-| [Javascript-Validator](https://jshint.com/) | Validation | tool for JavaScript-Validation ||
+| Source | Reason | Notes |
+| --- | --- | --- |
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+| [Font Aweseme](https://fontawesome.com/) | Source for my icon | site for icons and fonts |
+| [Google Fonts](https://fonts.google.com/) | Source for my fonts | site for icons and fonts |
+| [Youtube](https://youtube.com) | Inspiration | platform for videos |
+| [BigBangTheory-Fanpage](https://bigbangtheory.fandom.com) | Images | information site about the famous TV series |
+| [HTML-Validator](https://validator.w3.org/) | Validation | tool for HTML-Validation |
+| [CSS-Validator](https://jigsaw.w3.org/css-validator/validator.html.en) | Validation | tool for CSS-Validation |
+| [Javascript-Validator](https://jshint.com/) | Validation | tool for JavaScript-Validation |
 
 
 ## Media
